@@ -37,22 +37,22 @@ def get_cities_for_state(request):
 
 
 def frontend(request):
-    obj = sliderupdate.objects.all()
-    heading_content = ""
-    heading_content2 = ""
+    # obj = sliderupdate.objects.all()
+    # heading_content = ""
+    # heading_content2 = ""
 
 
-    if obj.__len__() != 0:
-        # Check if the queryset is not empty before accessing the latest object
-        latest_obj = obj.latest('id')
-        heading_content = latest_obj.heading
-        print(heading_content)
-        heading_content2 = latest_obj.heading2
+    # if obj.__len__() != 0:
+    #     # Check if the queryset is not empty before accessing the latest object
+    #     latest_obj = obj.latest('id')
+    #     heading_content = latest_obj.heading
+    #     print(heading_content)
+    #     heading_content2 = latest_obj.heading2
     
-    cars_list = cars.objects.all()
+    # cars_list = cars.objects.all()
 
-    return render(request, 'page/home_front.html', {'latest_heading': heading_content, 'latest_heading2': heading_content2, "car_data":cars_list})
-
+    # return render(request, 'page/home_front.html', {'latest_heading': heading_content, 'latest_heading2': heading_content2, "car_data":cars_list})
+    return HttpResponse("Lived")
 def form_oneway(request):
     if request.method == "POST":
         pickup = request.POST.get('pickup')
