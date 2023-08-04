@@ -53,6 +53,7 @@ def frontend(request):
 
     # return render(request, 'page/home_front.html', {'latest_heading': heading_content, 'latest_heading2': heading_content2, "car_data":cars_list})
     return HttpResponse("Lived")
+
 def form_oneway(request):
     if request.method == "POST":
         pickup = request.POST.get('pickup')
