@@ -16,4 +16,7 @@ urlpatterns = [
     path('contactus', views.contact_front, name='contact_us'),
     path('contact_form', views.contactus_form, name="contact_form_details")
 
-] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+]
+
+urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
